@@ -8,7 +8,7 @@ $basefolder = "./";
 require_once($basefolder.'config.php');
 
 $filefolder = preg_replace("/^\.\.\//","",$filefolder);
-$countfile = $basefolder.$countsfolder.str_replace($filefolder,'',$file).$count_ext;
+$countfile = rawurldecode($basefolder.$countsfolder.str_replace($filefolder,'',$file).$count_ext);
 
 $count = 0;
 if (file_exists($countfile)) $count = @file_get_contents($countfile);
