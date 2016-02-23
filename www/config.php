@@ -1,6 +1,12 @@
 <?php
-$filefolder = 'files/'; //Include trailing slash
-$statsfolder = 'stats/';
+// Config path. Include trailing slash
+$filefolder = 'files/';      // Path with files, what need to log
+$statsfolder = 'stats/';     // Full statistic place. Comment/Uncomment it for enable/disable full statistic
+$countsfolder = 'counts/';   // Only counter. Comment/Uncomment if for enable/disable generating short counters
+
+// Stat file extensions 
+$stat_ext = '.log';
+$count_ext = '.count';
 
 $nixWithExec = true; //Set to true if server is running on a *nix system with PHP exec enabled for faster stats
 
